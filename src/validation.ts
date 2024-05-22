@@ -17,9 +17,6 @@ export default function validateParams(
   const validateResult = schema.validate(infoData);
 
   if (validateResult.error) {
-    const err = new Error();
-    // err.message = validateResult.error.details[0].message;
-
     res.status(404).send(validateResult.error.details);
   }
 
