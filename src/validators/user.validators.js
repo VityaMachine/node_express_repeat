@@ -12,6 +12,12 @@ class UserValidators {
     const validateResult = newUserSchema.validate({...req.body})
 
     if(validateResult.error) {
+
+        // const err = new Error();
+        // err.code = 400;
+        // err.message = validateResult.error.details[0].message
+        // next(err)
+
         return res.status(400).send(validateResult.error)
     }
 

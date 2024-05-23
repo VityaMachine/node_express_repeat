@@ -14,7 +14,7 @@ class UserController {
   }
 
   addNewUser(req, res, next) {
-    
+   
   }
 }
 

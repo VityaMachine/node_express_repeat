@@ -10,7 +10,7 @@ userRouter.get('/', userController.getUsers)
 
 userRouter.get('/:id', userController.getUserById)
 
-userRouter.post('/', userValidators.addNewUserValidator)
+userRouter.post('/', userValidators.addNewUserValidator, userController.addNewUser)
 
 
 module.exports = userRouter
